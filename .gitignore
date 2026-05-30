@@ -1,0 +1,35 @@
+# --- OMEGA-SINGULARITY-N3710 EXCLUSION POLICY ---
+# Jede Datei, die nicht explizit zur architektonischen Dokumentation 
+# gehört, wird von der Singularität ausgeschlossen.
+
+# Lokale System-Logs und temporäre Artefakte
+*.log
+*.tmp
+*.temp
+*~
+.DS_Store
+
+# Lokale Konfigurationsdateien des Architekten
+.env
+.secrets
+*.key
+*.pem
+
+# Binär- und Objektdateien (Wir dokumentieren nur formale Spezifikationen)
+*.o
+*.bin
+*.out
+*.exe
+
+# Exklusion der Hardware-spezifischen IDs
+# Sicherstellung, dass keine privaten System-Logs in die Doku gelangen
+/sys/
+/proc/
+/var/log/
+
+# Nur unsere definierten Spezifikations-Dateien sind zulässig
+!/README.md
+!/ARCHITECTURE.md
+!/SECURITY_PROTOCOL.md
+!/TELEMETRY_VALIDATION.md
+!/GOVERNANCE_SPEC.sh
